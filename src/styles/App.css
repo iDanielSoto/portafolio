@@ -1,0 +1,175 @@
+/* ========== Reset global ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f9fafb;
+  color: #2d2d2d;
+  line-height: 1.6;
+}
+
+/* ========== Layout general ========== */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 250px;
+  background-color: #ffffff;
+  transition: margin 0.3s;
+}
+
+.main-header {
+  padding: 2rem;
+  background-color: #f1f5f9;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.main-header h1 {
+  font-size: 2rem;
+  color: #1e293b;
+}
+
+.main-header p {
+  color: #64748b;
+}
+
+.content-area {
+  padding-left: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.welcome-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 3rem auto;
+}
+
+.bento-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.bento-card h2 {
+  font-size: 1.5rem;
+  color: #4f46e5;
+  margin-bottom: 0.5rem;
+}
+
+.bento-card p {
+  color: #475569;
+  font-size: 1rem;
+}
+
+.bento-image {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+}
+
+.logo-card {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  object-fit: cover;
+}
+
+
+/* ========== Sección de trabajo estructurado ========== */
+.trabajo-section {
+  background-color: #f8fafc;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+.trabajo-section h3 {
+  font-size: 1.25rem;
+  color: #334155;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.trabajo-section ul {
+  padding-left: 1.5rem;
+}
+
+.trabajo-section li {
+  margin-bottom: 0.5rem;
+}
+
+/* ========== Multimedia (imagen, video, PDF, embed) ========== */
+[class*="trabajo-container"] {
+  margin-bottom: 2rem;
+}
+
+.trabajo-imagen,
+.trabajo-video,
+.trabajo-pdf,
+.trabajo-embed {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05);
+}
+
+.imagen-descripcion,
+.pdf-descripcion,
+.video-descripcion,
+.embed-descripcion {
+  text-align: center;
+  color: #6b7280;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* ========== Responsive ========== */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    margin-top: 60px;
+  }
+
+  .trabajo-pdf,
+  .trabajo-embed {
+    height: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .content-area {
+    padding: 1rem;
+  }
+
+  .trabajo-detalle,
+  .welcome-section,
+  .trabajo-section {
+    padding: 1rem;
+  }
+
+  .trabajo-pdf,
+  .trabajo-embed {
+    height: 300px;
+  }
+}
